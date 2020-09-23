@@ -1,0 +1,259 @@
+{%- block doctype -%}
+  <!DOCTYPE html>
+{%- endblock %}
+
+{% set script_files = ["_static/erp/js/jquery-2.1.4.min.js", "_static/erp/js/mfn.menu.js", "_static/erp/js/jquery.plugins.js", "_static/erp/js/jquery.jplayer.min.js", "_static/erp/js/animations/animations.js", "_static/erp/js/translate3d.js", "_static/erp/js/scripts.js", "_static/erp/plugins/rs-plugin-6.custom/js/revolution.tools.min.js", "_static/erp/plugins/rs-plugin-6.custom/js/rs6.min.js"] %}
+{% set css_files = ["_static/erp/css/global.css", "_static/erp/css/structure.css", "_static/erp/css/erp2.css", "_static/erp/plugins/rs-plugin-6.custom/css/rs6.css"] %}
+{%- set url_root = pathto('', 1) %}
+
+{%- macro script() %}
+  <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+          URL_ROOT: '{{ url_root }}',
+          VERSION: '{{ release|e }}',
+          COLLAPSE_INDEX: false,
+          FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
+          HAS_SOURCE: {{ has_source|lower }}
+      };
+  </script>
+
+  {%- for scriptfile in script_files %}
+    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+  {%- endfor %}
+{%- endmacro %}
+
+{%- macro css() %}
+  <!-- FONTS -->
+  <link rel='stylesheet'
+        href='http://fonts.googleapis.com/css?family=DM+Sans:100,200,300,400,400italic,500,700,700italic,900'>
+  <link rel='stylesheet'
+        href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,400italic,500,700,700italic,900'>
+  {%- for cssfile in css_files %}
+    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css"/>
+  {%- endfor %}
+  <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css"/>
+{%- endmacro %}
+
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="description" content="Efficient topic modelling of text semantics in Python."/>
+  <meta property="og:title" content="gensim: topic modelling for humans"/>
+  <meta property="og:description" content="Efficient topic modelling in Python"/>
+
+  {{ metatags }}
+  {%- block htmltitle %}
+    <title>Gensim: {{ title|striptags|e }}</title>
+  {%- endblock %}
+
+  {{ css() }}
+
+  <link rel="shortcut icon" href="{{ pathto('_static/favicon.ico', 1) }}"/>
+</head>
+
+<body class="home page-template-default page template-slider color-custom style-default button-round layout-full-width if-zoom no-content-padding header-transparent header-fw minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-title-left menu-link-color menuo-no-borders mobile-tb-center mobile-side-slide mobile-mini-mr-lc tablet-sticky mobile-header-mini mobile-sticky">
+<div id="Wrapper">
+  <div id="Header_wrapper" class>
+    <header id="Header">
+      {% include "topbar.html" %}
+    </header>
+    <div class="mfn-main-slider mfn-rev-slider">
+      <p class="rs-p-wp-fix"></p>
+      <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery"
+                      style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+        <rs-module id="rev_slider_1_1" data-version="6.2.6">
+          <rs-slides>
+            <rs-slide data-key="rs-1" data-title="Slide" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
+              <img src="{{ pathto('_static/erp/images/transparent.png', 1) }}" title="Home" class="rev-slidebg"
+                   data-no-retina>
+              <rs-layer id="slider-1-slide-1-layer-0" data-type="shape" data-rsp_ch="on"
+                        data-xy="x:c;yo:-1px,-1px,0,-1px;" data-text="w:normal;s:20,20,12,12;l:0,0,15,15;"
+                        data-dim="w:99%,99%,100%,100%;h:1200px,1200px,752px,752px;" data-basealign="slide"
+                        data-border="bor:0,0,100px,100px;"
+                        data-frame_999="o:0;st:w;sR:8700;" style="z-index:5;background-color:#5325b3;">
+                <rs-bg-elem
+                        style="background: url('{{ pathto('_static/erp/images/erp2-slider-bg.png', 1) }}') no-repeat center center; background-size: cover;"></rs-bg-elem>
+              </rs-layer>
+
+              <rs-layer id="slider-1-slide-1-layer-2" data-type="text" data-rsp_ch="on"
+                        data-xy="x:c;yo:210px,210px,158px,158px;"
+                        data-text="w:normal;s:80,80,60,60;l:85,85,60,60;fw:700;a:center;"
+                        data-dim="w:1000px,1000px,700px,700px;" data-frame_0="y:50,50,31,31;"
+                        data-frame_1="st:150;sp:1000;sR:150;" data-frame_999="o:0;st:w;sR:7850;"
+                        style="z-index:11;font-family:DM Sans;">
+                Topic modelling
+                <br>for humans
+              </rs-layer>
+              <rs-layer id="slider-1-slide-1-layer-3" data-type="text" data-color="#ff9c00" data-rsp_ch="on"
+                        data-xy="x:c;yo:170px,170px,106px,106px;" data-text="w:normal;s:18;l:28;fw:700;a:center;"
+                        data-frame_0="y:50,50,31,31;" data-frame_1="st:100;sp:1000;sR:100;"
+                        data-frame_999="o:0;st:w;sR:7900;" style="z-index:10;font-family:DM Sans;">
+                Gensim is a FREE Python library
+              </rs-layer>
+              <a id="slider-1-slide-1-layer-4" class="rs-layer rev-btn" href="#features" data-type="button"
+                 data-rsp_ch="on" data-xy="x:c;yo:500px,500px,413px,413px;"
+                 data-text="w:normal;s:16;l:50,50,50,50;fw:700;"
+                 data-dim="minh:0px,0px,none,0px;" data-padding="r:30;l:30;" data-border="bor:25px,25px,25px,25px;"
+                 data-frame_0="y:50,50,31,31;" data-frame_1="st:250;sp:1000;sR:250;" data-frame_999="o:0;st:w;sR:7750;"
+                 data-frame_hover="bgc:#f06b08;bor:25px,25px,25px,25px;sp:200;e:power1.inOut;"
+                 style="z-index:13;background-color:#ff7a17;font-family:Roboto;">Explore all features</a>
+              <rs-layer id="slider-1-slide-1-layer-5" data-type="image" data-rsp_ch="on"
+                        data-xy="x:c;yo:110px,110px,68px,68px;" data-text="w:normal;s:20,20,12,12;l:0,0,15,15;"
+                        data-dim="w:1325px,1325px,831px,831px;h:488px,488px,305px,305px;"
+                        data-frame_1="e:power4.inOut;sp:1000;"
+                        data-frame_999="o:0;st:w;sR:8000;" style="z-index:9;"><img
+                      src="{{ pathto('_static/erp/images/erp2-slider-pic2.png', 1) }}" width="1325" height="488"
+                      data-no-retina>
+              </rs-layer>
+              <rs-layer id="slider-1-slide-1-layer-6" data-type="image" data-rsp_ch="on" data-xy="x:c;y:b;"
+                        data-text="w:normal;s:20,20,12,12;l:0,0,15,15;"
+                        data-dim="w:1465px,1465px,778px,778px;h:754px,754px,400px,400px;" data-frame_0="sX:0.8;sY:0.8;"
+                        data-frame_1="e:power4.out;st:300;sp:1000;sR:300;"
+                        data-frame_999="o:0;st:w;sR:7700;" style="z-index:14;"><img
+                      src="{{ pathto('_static/erp/images/erp2-slider-pic1.png', 1) }}" width="1465" height="754"
+                      data-no-retina>
+              </rs-layer>
+            </rs-slide>
+          </rs-slides>
+          <rs-progress class="rs-bottom" style="visibility: hidden !important;"></rs-progress>
+        </rs-module>
+      </rs-module-wrap>
+    </div>
+  </div>
+  {% block content %}
+    {% block document %}
+      {% block body %} {% endblock %}
+    {% endblock %}
+  {% endblock %}
+  <footer id="Footer" class="clearfix">
+    <div class="widgets_wrapper">
+      <div class="container">
+        <div class="column one-fourth">
+          <aside class="widget_text widget widget_custom_html">
+            <div class="textwidget custom-html-widget">
+              <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
+                <div class="image_wrapper"><img class="scale-with-grid"
+                                                src="{{ pathto('_static/erp/images/erp2-footer-pic1.png', 1) }}">
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="column one-second">
+          <aside class="widget_text widget widget_custom_html">
+            <div class="textwidget custom-html-widget">
+              <h5 class="themecolor"> Do you have a question?</h5>
+              <h3> Feel free to contact</h3>
+              <hr class="no_line" style="margin:0 auto 30px">
+              <!--<h4 style="display: inline-block; font-weight: 300; margin-right: 10px; color: #000;"><i class="icon-mobile themecolor" style></i> +61 (0) 383 766 284</h4>-->
+              <h4 style="display: inline-block; font-weight: 300; color: #000;"><i class="icon-mail-line themecolor"
+                                                                                   style></i><a
+                      href="mailto:me@radimrehurek.com">me@radimrehurek.com</a></h4>
+            </div>
+          </aside>
+        </div>
+        <div class="column one-fourth">
+          <aside class="widget_text widget widget_custom_html">
+            <div style="text-align: right;">
+              <a style="margin: 0 7px;" href="https://github.com/RaRe-Technologies/gensim" target="_blank"><img
+                      src="{{ pathto('_static/erp/images/erp2-footer-icon1.png', 1) }}" alt></a>
+              <a style="margin: 0 7px;" href="https://twitter.com/gensim_py#" target="_blank"><img
+                      src="{{ pathto('_static/erp/images/erp2-footer-icon2.png', 1) }}" alt></a>
+              <a style="margin: 0 7px;" href="#" target="_blank"><img
+                      src="{{ pathto('_static/erp/images/erp2-footer-icon3.png', 1) }}" alt></a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <div class="footer_copy">
+      <div class="container">
+        <div class="column one">
+          <a id="back_to_top" class="button button_js" href><i class="icon-up-open-big"></i></a>
+          <div class="copyright">
+            {%- if show_copyright %}
+              {%- if hasdoc('copyright') %}
+                {% set path = pathto('copyright') %}
+                {% set copyright = copyright|e %}
+                &copy; <a href="{{ path }}">{% trans %}Copyright{% endtrans %}</a> {{ copyright }}
+              {%- else %}
+                {% set copyright = copyright|e %}
+                &copy; {% trans %}Copyright{% endtrans %} {{ copyright }}
+              {%- endif %}
+            {%- endif %}
+
+            {%- if build_id and build_url %}
+              <span class="build">
+                            {# Translators: Build is a noun, not a verb #}
+                {% trans %}Build{% endtrans %}
+                <a href="{{ build_url }}">{{ build_id }}</a>.
+                          </span>
+            {%- elif commit %}
+              <span class="commit">
+                            {# Translators: the phrase "revision" comes from Git, referring to a commit #}
+                {% trans %}Revision{% endtrans %} <code>{{ commit }}</code>.
+                          </span>
+            {%- elif last_updated %}
+              <span class="lastupdated">
+                            {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+                          </span>
+            {%- endif %}
+            <br>
+            <a target="_blank" rel="nofollow" href="https://radimrehurek.com/"> Radim Řehůřek – Machine learing and data
+              mining expert</a>
+            <br>
+            <a target="_blank" rel="nofollow" href="https://edgy.digital/"> Created by edgy.digital</a>
+          </div>
+          <nav id="social-menu" class="menu-footer-container">
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+{% include "sideslide.html" %}
+
+{{ script() }}
+<script>
+    var revapi1, tpj;
+    jQuery(function () {
+        tpj = jQuery;
+        revapi1 = tpj("#rev_slider_1_1")
+        if (revapi1 == undefined || revapi1.revolution == undefined) {
+            revslider_showDoubleJqueryError("rev_slider_1_1");
+        } else {
+            revapi1.revolution({
+                sliderType: "hero",
+                sliderLayout: "fullwidth",
+                visibilityLevels: "1240,1240,778,778",
+                gridwidth: "1240,1240,778,778",
+                gridheight: "1400,1400,960,960",
+                spinner: "spinner8",
+                perspective: 600,
+                perspectiveType: "global",
+                spinnerclr: "#333ad7",
+                editorheight: "1400,768,960,720",
+                responsiveLevels: "1240,1240,778,778",
+                disableProgressBar: "on",
+                navigation: {
+                    onHoverStop: false
+                },
+                fallbacks: {
+                    allowHTML5AutoPlayOnAndroid: true
+                },
+            });
+        }
+    });
+</script>
+
+</body>
+
+</html>
