@@ -2,8 +2,8 @@
   <!DOCTYPE html>
 {%- endblock %}
 
-{% set script_files = ["_static/erp/js/jquery-2.1.4.min.js", "_static/erp/js/mfn.menu.js", "_static/erp/js/jquery.plugins.js", "_static/erp/js/jquery.jplayer.min.js", "_static/erp/js/animations/animations.js", "_static/erp/js/translate3d.js", "_static/erp/js/scripts.js", "_static/erp/plugins/rs-plugin-6.custom/js/revolution.tools.min.js", "_static/erp/plugins/rs-plugin-6.custom/js/rs6.min.js"] %}
-{% set css_files = ["_static/erp/css/global.css", "_static/erp/css/structure.css", "_static/erp/css/erp2.css", "_static/erp/plugins/rs-plugin-6.custom/css/rs6.css"] %}
+{% set script_files = ["_static/js/jquery-2.1.4.min.js", "_static/js/mfn.menu.js", "_static/js/jquery.plugins.js", "_static/js/jquery.jplayer.min.js", "_static/js/animations.js", "_static/js/translate3d.js", "_static/js/scripts.js", "_static/plugins/rs-plugin-6/js/revolution.tools.min.js", "_static/plugins/rs-plugin-6/js/rs6.min.js"] %}
+{% set css_files = ["_static/css/global.css", "_static/css/structure.css", "_static/css/erp2.css", "_static/plugins/rs-plugin-6/css/rs6.css"] %}
 {%- set url_root = pathto('', 1) %}
 
 {%- macro script() %}
@@ -26,8 +26,6 @@
   <!-- FONTS -->
   <link rel='stylesheet'
         href='http://fonts.googleapis.com/css?family=DM+Sans:100,200,300,400,400italic,500,700,700italic,900'>
-  <link rel='stylesheet'
-        href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,400italic,500,700,700italic,900'>
   {%- for cssfile in css_files %}
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css"/>
   {%- endfor %}
@@ -43,6 +41,14 @@
 <!--<![endif]-->
 
 <head>
+  <!-- Google Tag Manager - JD-20170831 -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MP366CC');</script>
+  <!-- End Google Tag Manager -->
+
   <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="description" content="Efficient topic modelling of text semantics in Python."/>
@@ -65,68 +71,7 @@
     <header id="Header">
       {% include "topbar.html" %}
     </header>
-    <div class="mfn-main-slider mfn-rev-slider">
-      <p class="rs-p-wp-fix"></p>
-      <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery"
-                      style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
-        <rs-module id="rev_slider_1_1" data-version="6.2.6">
-          <rs-slides>
-            <rs-slide data-key="rs-1" data-title="Slide" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
-              <img src="{{ pathto('_static/erp/images/transparent.png', 1) }}" title="Home" class="rev-slidebg"
-                   data-no-retina>
-              <rs-layer id="slider-1-slide-1-layer-0" data-type="shape" data-rsp_ch="on"
-                        data-xy="x:c;yo:-1px,-1px,0,-1px;" data-text="w:normal;s:20,20,12,12;l:0,0,15,15;"
-                        data-dim="w:99%,99%,100%,100%;h:1200px,1200px,752px,752px;" data-basealign="slide"
-                        data-border="bor:0,0,100px,100px;"
-                        data-frame_999="o:0;st:w;sR:8700;" style="z-index:5;background-color:#5325b3;">
-                <rs-bg-elem
-                        style="background: url('{{ pathto('_static/erp/images/erp2-slider-bg.png', 1) }}') no-repeat center center; background-size: cover;"></rs-bg-elem>
-              </rs-layer>
-
-              <rs-layer id="slider-1-slide-1-layer-2" data-type="text" data-rsp_ch="on"
-                        data-xy="x:c;yo:210px,210px,158px,158px;"
-                        data-text="w:normal;s:80,80,60,60;l:85,85,60,60;fw:700;a:center;"
-                        data-dim="w:1000px,1000px,700px,700px;" data-frame_0="y:50,50,31,31;"
-                        data-frame_1="st:150;sp:1000;sR:150;" data-frame_999="o:0;st:w;sR:7850;"
-                        style="z-index:11;font-family:DM Sans;">
-                Topic modelling
-                <br>for humans
-              </rs-layer>
-              <rs-layer id="slider-1-slide-1-layer-3" data-type="text" data-color="#ff9c00" data-rsp_ch="on"
-                        data-xy="x:c;yo:170px,170px,106px,106px;" data-text="w:normal;s:18;l:28;fw:700;a:center;"
-                        data-frame_0="y:50,50,31,31;" data-frame_1="st:100;sp:1000;sR:100;"
-                        data-frame_999="o:0;st:w;sR:7900;" style="z-index:10;font-family:DM Sans;">
-                Gensim is a FREE Python library
-              </rs-layer>
-              <a id="slider-1-slide-1-layer-4" class="rs-layer rev-btn" href="#features" data-type="button"
-                 data-rsp_ch="on" data-xy="x:c;yo:500px,500px,413px,413px;"
-                 data-text="w:normal;s:16;l:50,50,50,50;fw:700;"
-                 data-dim="minh:0px,0px,none,0px;" data-padding="r:30;l:30;" data-border="bor:25px,25px,25px,25px;"
-                 data-frame_0="y:50,50,31,31;" data-frame_1="st:250;sp:1000;sR:250;" data-frame_999="o:0;st:w;sR:7750;"
-                 data-frame_hover="bgc:#f06b08;bor:25px,25px,25px,25px;sp:200;e:power1.inOut;"
-                 style="z-index:13;background-color:#ff7a17;font-family:Roboto;">Explore all features</a>
-              <rs-layer id="slider-1-slide-1-layer-5" data-type="image" data-rsp_ch="on"
-                        data-xy="x:c;yo:110px,110px,68px,68px;" data-text="w:normal;s:20,20,12,12;l:0,0,15,15;"
-                        data-dim="w:1325px,1325px,831px,831px;h:488px,488px,305px,305px;"
-                        data-frame_1="e:power4.inOut;sp:1000;"
-                        data-frame_999="o:0;st:w;sR:8000;" style="z-index:9;"><img
-                      src="{{ pathto('_static/erp/images/erp2-slider-pic2.png', 1) }}" width="1325" height="488"
-                      data-no-retina>
-              </rs-layer>
-              <rs-layer id="slider-1-slide-1-layer-6" data-type="image" data-rsp_ch="on" data-xy="x:c;y:b;"
-                        data-text="w:normal;s:20,20,12,12;l:0,0,15,15;"
-                        data-dim="w:1465px,1465px,778px,778px;h:754px,754px,400px,400px;" data-frame_0="sX:0.8;sY:0.8;"
-                        data-frame_1="e:power4.out;st:300;sp:1000;sR:300;"
-                        data-frame_999="o:0;st:w;sR:7700;" style="z-index:14;"><img
-                      src="{{ pathto('_static/erp/images/erp2-slider-pic1.png', 1) }}" width="1465" height="754"
-                      data-no-retina>
-              </rs-layer>
-            </rs-slide>
-          </rs-slides>
-          <rs-progress class="rs-bottom" style="visibility: hidden !important;"></rs-progress>
-        </rs-module>
-      </rs-module-wrap>
-    </div>
+    {% block slider %}{% endblock %}
   </div>
   {% block content %}
     {% block document %}
@@ -141,7 +86,7 @@
             <div class="textwidget custom-html-widget">
               <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
                 <div class="image_wrapper"><img class="scale-with-grid"
-                                                src="{{ pathto('_static/erp/images/erp2-footer-pic1.png', 1) }}">
+                                                src="{{ pathto('_static/images/erp2-footer-pic1.png', 1) }}">
                 </div>
               </div>
             </div>
@@ -164,11 +109,11 @@
           <aside class="widget_text widget widget_custom_html">
             <div style="text-align: right;">
               <a style="margin: 0 7px;" href="https://github.com/RaRe-Technologies/gensim" target="_blank"><img
-                      src="{{ pathto('_static/erp/images/erp2-footer-icon1.png', 1) }}" alt></a>
+                      src="{{ pathto('_static/images/erp2-footer-icon1.png', 1) }}" alt></a>
               <a style="margin: 0 7px;" href="https://twitter.com/gensim_py#" target="_blank"><img
-                      src="{{ pathto('_static/erp/images/erp2-footer-icon2.png', 1) }}" alt></a>
+                      src="{{ pathto('_static/images/erp2-footer-icon2.png', 1) }}" alt></a>
               <a style="margin: 0 7px;" href="#" target="_blank"><img
-                      src="{{ pathto('_static/erp/images/erp2-footer-icon3.png', 1) }}" alt></a>
+                      src="{{ pathto('_static/images/erp2-footer-icon3.png', 1) }}" alt></a>
             </div>
           </aside>
         </div>
@@ -222,37 +167,8 @@
 {% include "sideslide.html" %}
 
 {{ script() }}
-<script>
-    var revapi1, tpj;
-    jQuery(function () {
-        tpj = jQuery;
-        revapi1 = tpj("#rev_slider_1_1")
-        if (revapi1 == undefined || revapi1.revolution == undefined) {
-            revslider_showDoubleJqueryError("rev_slider_1_1");
-        } else {
-            revapi1.revolution({
-                sliderType: "hero",
-                sliderLayout: "fullwidth",
-                visibilityLevels: "1240,1240,778,778",
-                gridwidth: "1240,1240,778,778",
-                gridheight: "1400,1400,960,960",
-                spinner: "spinner8",
-                perspective: 600,
-                perspectiveType: "global",
-                spinnerclr: "#333ad7",
-                editorheight: "1400,768,960,720",
-                responsiveLevels: "1240,1240,778,778",
-                disableProgressBar: "on",
-                navigation: {
-                    onHoverStop: false
-                },
-                fallbacks: {
-                    allowHTML5AutoPlayOnAndroid: true
-                },
-            });
-        }
-    });
-</script>
+
+{% block footer %}{% endblock %}
 
 </body>
 

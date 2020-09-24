@@ -8,13 +8,21 @@
 {%- endif %}
 {%- set lang_attr = 'en' if language == None else (language | replace('_', '-')) %}
 {%- set sphinx_writer = 'writer-html5' if html5_doctype else 'writer-html4' %}
-{% set css_files = css_files + ["_static/erp/css/docs.css"] %}
-{% set footer_script_files = ["_static/erp/js/jquery-2.1.4.min.js", "_static/erp/js/mfn.menu.js", "_static/erp/js/jquery.plugins.js", "_static/erp/js/jquery.jplayer.min.js", "_static/erp/js/animations/animations.js", "_static/erp/js/translate3d.js", "_static/erp/js/scripts.js"] %}
+{% set css_files = css_files + ["_static/css/docs.css"] %}
+{% set footer_script_files = ["_static/js/jquery-2.1.4.min.js", "_static/js/mfn.menu.js", "_static/js/jquery.plugins.js", "_static/js/jquery.jplayer.min.js", "_static/js/animations.js", "_static/js/translate3d.js", "_static/js/scripts.js"] %}
 
 
 <!DOCTYPE html>
 <html class="{{ sphinx_writer }}" lang="{{ lang_attr }}">
 <head>
+  <!-- Google Tag Manager - JD-20170831 -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MP366CC');</script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="utf-8">
   {{ metatags }}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,8 +48,6 @@
 
   <link rel='stylesheet'
         href='http://fonts.googleapis.com/css?family=DM+Sans:100,200,300,400,400italic,500,700,700italic,900'>
-  <link rel='stylesheet'
-        href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,400italic,500,700,700italic,900'>
 
   {# FAVICON #}
   {% if favicon %}
