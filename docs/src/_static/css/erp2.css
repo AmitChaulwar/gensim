@@ -2568,3 +2568,13 @@ pre.prettyprint {
         font-size: 10px !important;
     }
 }
+
+.slick-track
+{
+    display: flex !important;
+}
+
+.slick-slide
+{
+    height: inherit !important;
+}
