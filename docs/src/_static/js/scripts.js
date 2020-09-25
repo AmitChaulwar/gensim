@@ -2003,7 +2003,7 @@ if(slider.siblings( '.slider_prev' ).length){
 				prevArrow		: '<a class="button button_js slider_prev" href="#"><span class="button_icon"><i class="icon-left-open-big"></i></span></a>',
 				nextArrow		: '<a class="button button_js slider_next" href="#"><span class="button_icon"><i class="icon-right-open-big"></i></span></a>',
 				
-				adaptiveHeight	: true,				
+				adaptiveHeight	: true,
 				appendDots		: slider.siblings( '.slider_pager' ),
 				customPaging 	: pager,
 
